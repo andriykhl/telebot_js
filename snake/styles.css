@@ -1,24 +1,36 @@
 body{
     margin  : 0;
 }
-#controls{
-    width : 100px;
-    height: 100px;
-    padding-left: 100px;
-}
+
 #left_right{
+    height: 50px;
     display: flex;
     direction:row;
 }
 
 #up{
-    margin-left: 10px;
+    width: 200px;
+    height: 50px;
+
+    margin-left: 150px;
 }
 
 #down{
-    margin-left: 10px;
+    width: 200px;
+    height: 50px;
+    margin-left: 150px;
 }
 
+#right{
+    width: 200px;
+    height: 50px;
+    margin-left: 100px;
+}
+#left{
+    width: 200px;
+    height: 50px;
+
+}
 .container{
     height : 100;
     line-height: 50px;

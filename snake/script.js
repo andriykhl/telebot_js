@@ -5,6 +5,7 @@ let btn_left = document.getElementById("left");
 let btn_right = document.getElementById("right");
 let btn_up = document.getElementById("up");
 let btn_down = document.getElementById("down");
+let btn_restart = document.getElementById("restart");
 
 canvas.width  = window.innerHeight/2;
 canvas.height = window.innerHeight/2;
@@ -165,3 +166,5 @@ btn_left.addEventListener('click', function(event) { new_D="L"; });
 btn_right.addEventListener('click', function(event) { new_D="R"; });
 btn_up.addEventListener('click', function(event) { new_D="U"; });
 btn_down.addEventListener('click', function(event) { new_D="D"; });
+
+btn_restart.addEventListener('click', function(event) { restart(); });
