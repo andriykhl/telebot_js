@@ -1,0 +1,54 @@
+* {
+    font-family: Verdana bold , Geneva bold , Tahoma bold, sans-serif bold;  
+  }
+
+.row{
+    display: flex;
+    gap: 6px;
+}
+
+.keyboard{
+    margin-left: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    gap: 6px;
+}
+
+.key{
+    background-color: lightgrey;
+    height: 61px;
+    width : 61px;
+    border: none;
+    font-size: 17px;
+    border-radius: 6px;
+    outline: none;
+}
+.key:hover
+{
+    background-color: rgb(156, 156, 156);
+}
+
+.field{
+    margin-left: 40%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.field_row{
+    display: flex;
+    gap: 2px;
+}
+
+.square{
+    background-color: lightgrey;
+    height: 70px;
+    width : 70px;
+    font-size: 21px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
