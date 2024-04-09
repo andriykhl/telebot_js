@@ -113,6 +113,9 @@ function create_keyboard(){
     }
     keyboard.appendChild(row);
   }
+  let row = document.createElement("div");
+  row.className= "row";
+
   let btn_enter = document.createElement("button");
   btn_enter.className= "enter_btn";
   btn_enter.innerHTML = "ENTER";
@@ -143,7 +146,31 @@ function create_keyboard(){
       if(answer==true_word) alert("WIN!");             
     }
   });
-  keyboard.appendChild(btn_enter);
+  row.appendChild(btn_enter);
+
+  let btn_backspace = document.createElement("button");
+  btn_backspace.className= "backspace_btn";
+  btn_backspace.innerHTML = "DEL";
+  btn_backspace.addEventListener("click", function(event)
+  {
+    if(curr_column>0)
+      {
+        console.log("DELETE: ");
+        curr_column--;
+        field_keys[curr_row][curr_column].innerHTML = "";
+        answer = answer.substring(0, answer.length - 1);
+        console.log(answer); 
+      }
+      else if(char>=65 && char<=90 && answer.length<n_columns)
+      {
+        let letter = String.fromCharCode(char).toUpperCase();
+        answer += letter;
+        field_keys[curr_row][curr_column].innerHTML = letter;
+        curr_column++;
+      }
+  });
+  row.appendChild(btn_backspace);
+  keyboard.appendChild(row);
   return keyboard_keys;
 }
 
@@ -168,7 +195,7 @@ function init()
   true_word = get_true_word().toUpperCase();
   reload_btn.addEventListener('click', function()
   {
-    app.sendData("hello world");
+    //app.sendData("hello world");
     init();
   }
   );

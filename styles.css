@@ -15,8 +15,13 @@
 }
 
 .enter_btn{
-    height: 51px;
-    width : 300px;
+    height: 41px;
+    width : 310px;
+}
+
+.backspace_btn{
+    height: 41px;
+    width : 50px;
 }
 
 .key{
