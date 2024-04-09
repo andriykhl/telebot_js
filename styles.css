@@ -8,17 +8,21 @@
 }
 
 .keyboard{
-    margin-left: 30%;
     display: flex;
     flex-direction: column;
     justify-content: left;
     gap: 6px;
 }
 
+.enter_btn{
+    height: 51px;
+    width : 300px;
+}
+
 .key{
     background-color: lightgrey;
-    height: 61px;
-    width : 61px;
+    height: 31px;
+    width : 31px;
     border: none;
     font-size: 17px;
     border-radius: 6px;
@@ -30,8 +34,6 @@
 }
 
 .field{
-    margin-left: 40%;
-    justify-content: center;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -44,8 +46,8 @@
 
 .square{
     background-color: lightgrey;
-    height: 70px;
-    width : 70px;
+    height: 60px;
+    width : 60px;
     font-size: 21px;
     border: none;
     border-radius: 10px;

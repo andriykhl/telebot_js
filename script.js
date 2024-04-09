@@ -113,6 +113,37 @@ function create_keyboard(){
     }
     keyboard.appendChild(row);
   }
+  let btn_enter = document.createElement("button");
+  btn_enter.className= "enter_btn";
+  btn_enter.innerHTML = "ENTER";
+  btn_enter.addEventListener("click", function(event)
+  {
+    if(answer.length===n_columns && words_set.has(answer.toLowerCase())) {
+      for(let i=0; i<n_columns; ++i)
+      {
+          field_keys[curr_row][i].style.fontWeight = "bold";
+          if(answer[i]==true_word[i])
+          {
+            field_keys[curr_row][i].style.backgroundColor = "rgb(121, 184, 81)";
+            keyboard_keys[answer[i]].style.backgroundColor = "rgb(121, 184, 81)";
+          }
+          else if(true_word.includes(answer[i]))
+          {
+            field_keys[curr_row][i].style.backgroundColor = "rgb(243, 194, 55)";
+            keyboard_keys[answer[i]].style.backgroundColor = "rgb(243, 194, 55)";
+          }
+          else
+          {
+            keyboard_keys[answer[i]].style.backgroundColor = "gray";
+          }
+      }
+      curr_row++;
+      curr_column = 0;
+      answer="";
+      if(answer==true_word) alert("WIN!");             
+    }
+  });
+  keyboard.appendChild(btn_enter);
   return keyboard_keys;
 }
 
