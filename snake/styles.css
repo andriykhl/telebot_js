@@ -9,22 +9,18 @@ body{
 }
 
 #up{
-    width: 200px;
+    width: 400px;
     height: 50px;
-
-    margin-left: 150px;
 }
 
 #down{
-    width: 200px;
+    width: 400px;
     height: 50px;
-    margin-left: 150px;
 }
 
 #right{
     width: 200px;
     height: 50px;
-    margin-left: 100px;
 }
 #left{
     width: 200px;
